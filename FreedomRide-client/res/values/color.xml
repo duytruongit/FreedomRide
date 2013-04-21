@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#FFFFFF</color><!--白色 -->
+	<color name="black">#000000</color><!--黑色 -->
+	
+	<color name="dack_blue">#3A90A7</color><!-- 深蓝色 主色调 -->
+	<color name="gray">#BDBEBD</color><!-- 深蓝色 主色调 -->
+	
+</resources>

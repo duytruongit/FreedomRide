@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    tools:context=".view.WallectActivity" 
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/wallect_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:layout_weight="8.6"
+    	android:gravity="top"
+    	android:background="@drawable/header_shape"
+        >
+        <TextView 
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="@string/surrounding"
+            android:textSize="16sp"
+            android:textColor="@color/white" 
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+        <ImageButton 
+            android:id="@+id/surrounding_loaction"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/surrounding_location_btn"
+            android:gravity="right"/>
+    </RelativeLayout >
+	<RelativeLayout 
+	    android:id="@+id/wallect_content"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_weight="2"
+    	android:background="@color/white">
+        <com.baidu.mapapi.map.MapView android:id="@+id/bmapsView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+	</RelativeLayout>
+	<include layout="@layout/footer"/>
+</LinearLayout>

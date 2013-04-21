@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FreedomRide</string>
+    <string name="app_name_ch">自游行</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="exit_dialog_title">退出</string>
+    <string name="exit_dialog_msg">你确定要退出程序？</string>
+    
+    <string name="cancle">取消</string>
+    <string name="ok">确定</string>
+
+    <string name="strategy">攻略</string>
+    <string name="surrounding">周边</string>
+    <string name="wallect">行囊</string>
+    <string name="publicsquare">广场</string>
+
+    <string name="hotel">酒店</string>
+    <string name="attration">景点</string>
+    <string name="restaurant">餐饮</string>
+    <string name="suppermarcket">超市</string>
+    
+    <string name="wallect_add_dialog_title">请输入</string>
+	
+    
+</resources>
