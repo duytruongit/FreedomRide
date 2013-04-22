@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.thyee.freedomride.client.R;
+import org.thyee.freedomride.client.utils.Data;
 
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,7 @@ public class SurroundingActivity extends PageActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mBMapMan = new BMapManager(getApplication());
-		mBMapMan.init("5403F22683017282F657273A7DCABD674A288323", null);
+		mBMapMan.init(Data.MAP_KEY, null);
 		// 注意：请在试用setContentView前初始化BMapManager对象，否则会报错
 		setContentView(R.layout.surrounding);
 		mMapView = (MapView) findViewById(R.id.bmapsView);
