@@ -1,6 +1,8 @@
 package org.thyee.freedomride.client.listener;
 
 import org.thyee.freedomride.client.R;
+import org.thyee.freedomride.client.utils.LogUtils;
+import org.thyee.freedomride.client.view.CollectionActivity;
 import org.thyee.freedomride.client.view.SettingActivity;
 
 import android.app.AlertDialog;
@@ -34,19 +36,25 @@ public class MenuListener implements OnClickListener {
 		MenuSelect menuSelect = MenuSelect.values()[position];
 		switch (menuSelect) {
 		case collect:
-			System.out.println("menu——个人攻略");
+			LogUtils.log("menu——收藏");
+			collect();
 			break;
 		case setting:
-			System.out.println("menu——设置");
+			LogUtils.log("menu——设置");
 			setting();
 			break;
 		case exit:
-			System.out.println("menu——退出");
+			LogUtils.log("menu——退出");
 			exit();
 			break;
 		default:
 			break;
 		}
+	}
+
+	private void collect() {
+		Intent intent = new Intent(context, CollectionActivity.class);
+		context.startActivity(intent);
 	}
 
 	private void setting() {
@@ -64,6 +72,10 @@ public class MenuListener implements OnClickListener {
 				new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
+						Intent startMain = new Intent(Intent.ACTION_MAIN);
+						startMain.addCategory(Intent.CATEGORY_HOME);
+						startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						context.startActivity(startMain);
 						System.exit(0);
 					}
 				});

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout   
+         xmlns:android="http://schemas.android.com/apk/res/android"   
+         android:layout_height="match_parent"   
+         android:layout_width="match_parent">  
+         <TextView 
+               android:id="@+id/collection_strategy_title"   
+             	android:layout_height="wrap_content"   
+             	android:textSize="18sp"
+             	android:layout_marginLeft="10dp"
+             	android:textColor="@color/dack_blue"
+               android:layout_width="wrap_content"
+               android:layout_centerVertical="true"
+          />
+         <TextView 
+               android:id="@+id/collection_strategy_tag"   
+             	android:layout_height="wrap_content"   
+               android:layout_width="wrap_content"
+             	android:layout_marginLeft="10dp"
+               android:layout_below="@id/collection_strategy_title"
+               android:layout_alignParentBottom="true"
+          />
+         <ImageButton 
+             android:id="@+id/sync_btn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="10dp"
+               android:layout_centerVertical="true"
+             android:background="@drawable/item_sync_btn"
+             android:layout_alignParentRight="true"/>
+         <ImageButton 
+             android:id="@+id/share_btn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             	android:layout_marginRight="10dp"
+               android:layout_centerVertical="true"
+             android:background="@drawable/item_share_btn"
+             android:layout_alignParentRight="true"/>
+        <ProgressBar android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+             	  android:layout_marginRight="15dp"
+               	  android:layout_centerVertical="true"
+				  style="?android:attr/progressBarStyleSmall"
+				  android:layout_alignParentRight="true"
+				  android:id="@+id/refresh_process_bar"
+  					></ProgressBar>
+</RelativeLayout>  

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:id="@+id/condition_dialog" 
+	 android:layout_height="wrap_content" 
+	 android:layout_width="wrap_content" 
+	 android:orientation="vertical">
+	 <EditText android:id="@+id/condition_name"
+		 android:layout_height="wrap_content" 
+		 android:layout_width="match_parent" 
+		 android:text="@string/strategy_default_name"
+	     />
+	 <Spinner android:id="@+id/condition_province_spinner"
+		 android:layout_height="wrap_content" 
+		 android:layout_width="match_parent" 
+		 android:entries="@array/province_list"
+	     />
+	 <Spinner android:id="@+id/condition_city_spinner"
+		 android:layout_height="wrap_content" 
+		 android:layout_width="match_parent" 
+		 android:entries="@array/guangdong"
+	     />
+	 <Spinner android:id="@+id/condition_type_spinner"
+		 android:layout_height="wrap_content" 
+		 android:layout_width="match_parent" 
+		 android:entries="@array/type_list"
+	     />
+	 
+</LinearLayout>

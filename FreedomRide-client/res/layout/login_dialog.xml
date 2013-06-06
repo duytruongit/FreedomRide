@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+	<RelativeLayout 
+        android:layout_width="300dp"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="30dp"
+    	android:paddingBottom="10dp"
+    	android:background="@drawable/index_round_rect">
+   		
+	    <EditText 
+	        android:id="@+id/login_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/login_name"/>
+   		
+	    <EditText 
+	        android:id="@+id/login_pwd"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/login_password"
+	        android:password="true"
+	        android:layout_below="@id/login_name"/>
+		<LinearLayout 
+	        android:id="@+id/button_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/login_pwd"
+		    >
+	    <Button 
+	        android:id="@+id/login_btn"
+	         android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/login"/>
+	    <Button 
+	        android:id="@+id/regist_btn"
+	         android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/regist"/>
+	   </LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout 
+	        android:id="@+id/loading_bar"
+        	android:layout_width="300dp"
+	        android:layout_height="186dp"
+	        android:layout_below="@id/login_pwd"
+	        android:background="@drawable/translucent_round_rect"
+	        android:visibility="gone"
+		    >
+	    	<ProgressBar 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+	    	    />
+	   </RelativeLayout>
+</RelativeLayout>

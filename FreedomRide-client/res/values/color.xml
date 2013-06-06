@@ -4,6 +4,9 @@
 	<color name="black">#000000</color><!--黑色 -->
 	
 	<color name="dack_blue">#3A90A7</color><!-- 深蓝色 主色调 -->
-	<color name="gray">#BDBEBD</color><!-- 深蓝色 主色调 -->
+	<color name="gray">#BDBEBD</color>
+	<color name="index_bg">#F2F1ED</color>
 	
+	<color name="translucent">#b0000000</color>
+	<color name="transparent">#9000</color>
 </resources>

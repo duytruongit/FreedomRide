@@ -1,5 +1,8 @@
 package org.thyee.freedomride.client.listener;
 
+import org.thyee.freedomride.client.utils.LogUtils;
+import org.thyee.freedomride.client.view.Square2Activity;
+import org.thyee.freedomride.client.view.StrategyActivity;
 import org.thyee.freedomride.client.view.SurroundingActivity;
 import org.thyee.freedomride.client.view.WallectActivity;
 
@@ -32,23 +35,30 @@ public class IndexListener implements OnClickListener {
 		IndexSelect indexSelect = IndexSelect.values()[position];
 		switch (indexSelect) {
 		case strategy:
-			System.out.println("攻略搜索");
+			LogUtils.log("攻略搜索");
+			strategy();
 			break;
 		case surrounding:
-			System.out.println("周边搜索");
+			LogUtils.log("周边搜索");
 			surrounding();
 			break;
 		case wallect:
-			System.out.println("行囊管理");
+			LogUtils.log("行囊管理");
 			wallect();
 			break;
 		case publicsquare:
-			System.out.println("广场搜索");
+			LogUtils.log("广场搜索");
+			square();
 			break;
 
 		default:
 			break;
 		}
+	}
+
+	private void strategy() {
+		Intent intent = new Intent(context, StrategyActivity.class);
+		context.startActivity(intent);
 	}
 
 	private void surrounding() {
@@ -58,6 +68,11 @@ public class IndexListener implements OnClickListener {
 
 	private void wallect() {
 		Intent intent = new Intent(context, WallectActivity.class);
+		context.startActivity(intent);
+	}
+
+	private void square() {
+		Intent intent = new Intent(context, Square2Activity.class);
 		context.startActivity(intent);
 	}
 }

@@ -16,13 +16,44 @@
     <string name="surrounding">周边</string>
     <string name="wallect">行囊</string>
     <string name="publicsquare">广场</string>
+    <string name="collection">收藏夹</string>
 
     <string name="hotel">酒店</string>
-    <string name="attration">景点</string>
+    <string name="attraction">景点</string>
     <string name="restaurant">餐饮</string>
     <string name="suppermarcket">超市</string>
     
     <string name="wallect_add_dialog_title">请输入</string>
+    
+    <string name="day">天</string>
+    <string name="strateyge_default_len">0.5 天</string>
+    <string name="choose_type">选择类别</string>
+    <string name="choose_city">选择城市</string>
+    <string name="strategy_search">搜索</string>
 	
+    <string name="how_long">玩多久？</string>
+    <string name="what_type">玩什么？</string>
+    <string name="where_go">去哪儿？</string>
+    
+    <string name="choice_condition">选择条件？</string>
+    
+    <string name="network_disabled">网络不可用，请检查网络设置</string>
+    <string name="refresh_complete">加载完成</string>
+    <string name="refresh_fail">加载失败</string>
+    <string name="off_line">离线</string>
+
+    
+    <string name="strategy_default_name">新建攻略1</string>
+    
+    
+    <string name="login_name">名称：</string>
+    <string name="login_password">密码：</string>
+    <string name="login">登录</string>
+    <string name="regist">注册</string>
+
+    <string name="please_input_name">请输入用户名！</string>
+    <string name="please_input_pwd">请输入密码！</string>
+    <string name="network_error">网络出错，请重试！</string>
+    <string name="all">全部</string>
     
 </resources>

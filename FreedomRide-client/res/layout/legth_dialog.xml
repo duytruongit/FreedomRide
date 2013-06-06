@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:id="@+id/lenght_dialog" 
+	 android:layout_height="wrap_content" 
+	 android:layout_width="wrap_content" 
+	 android:orientation="vertical">
+ <TextView 
+     android:id="@+id/strategy_length_text"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     />
+ <SeekBar 
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:max="10"
+     android:progress="1"
+     android:id="@+id/strategy_length_seekbar"
+     />
+
+</LinearLayout>

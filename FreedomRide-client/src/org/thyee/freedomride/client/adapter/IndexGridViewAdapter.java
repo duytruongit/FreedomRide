@@ -1,7 +1,7 @@
-package org.thyee.freedomride.client.view;
+package org.thyee.freedomride.client.adapter;
 
 import org.thyee.freedomride.client.R;
-import org.thyee.freedomride.client.listener.MenuListener;
+import org.thyee.freedomride.client.listener.IndexListener;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,21 +9,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class MenuGridViewAdepter extends BaseAdapter {
+public class IndexGridViewAdapter extends BaseAdapter {
 	private Context mContext;
-	private MenuListener menuListener;
+	private IndexListener listener;
 
-	private int[] imageIds = { R.drawable.menu_collect,
-			R.drawable.menu_setting, R.drawable.menu_exit };
+	private int[] imageIds = { R.drawable.index_search,
+			R.drawable.index_surrounding, R.drawable.index_wallet,
+			R.drawable.index_publicsquare };
+	private String[] names;
 
-	public MenuGridViewAdepter(Context c) {
+	public IndexGridViewAdapter(Context c) {
 		mContext = c;
-		menuListener = new MenuListener(mContext);
+		names = new String[] {
+				mContext.getResources().getString(R.string.strategy),
+				mContext.getResources().getString(R.string.surrounding),
+				mContext.getResources().getString(R.string.wallect),
+				mContext.getResources().getString(R.string.publicsquare) };
+		listener = new IndexListener(mContext);
+
 	}
 
 	public int getCount() {
-		return 3;
+		return imageIds.length;
 	}
 
 	public Object getItem(int position) {
@@ -40,22 +49,26 @@ public class MenuGridViewAdepter extends BaseAdapter {
 		if (convertView == null) { // if it's not recycled, initialize some
 									// attributes
 			LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-			convertView = layoutInflater.inflate(R.layout.menu_item, null);
+			convertView = layoutInflater.inflate(R.layout.index_item, null);
 			viewHolder = new ViewHolder();
 			viewHolder.imageButton = (Button) convertView
-					.findViewById(R.id.menu_image);
+					.findViewById(R.id.index_image);
+			viewHolder.textView = (TextView) convertView
+					.findViewById(R.id.index_text);
 			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		viewHolder.imageButton.setBackgroundResource(imageIds[position]);
 		viewHolder.imageButton.setTag(Integer.valueOf(position));
-		viewHolder.imageButton.setOnClickListener(menuListener);
+		viewHolder.imageButton.setOnClickListener(listener);
+		viewHolder.textView.setText(names[position]);
 		return convertView;
 	}
 
 	class ViewHolder {
 		Button imageButton;
+		TextView textView;
 	}
 
 }

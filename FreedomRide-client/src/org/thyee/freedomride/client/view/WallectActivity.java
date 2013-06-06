@@ -3,7 +3,9 @@ package org.thyee.freedomride.client.view;
 import java.util.Map;
 
 import org.thyee.freedomride.client.R;
+import org.thyee.freedomride.client.adapter.WallectListAdapter;
 import org.thyee.freedomride.client.utils.Data;
+import org.thyee.freedomride.client.view.base.PageActivity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,7 +21,7 @@ import android.widget.ListView;
 
 public class WallectActivity extends PageActivity {
 
-	private WallectListAdepter wallectListAdepter;
+	private WallectListAdapter wallectListAdapter;
 	private SharedPreferences sharedPreferences;
 	private ListView listView;
 	private Map<String, Boolean> map;
@@ -35,8 +37,8 @@ public class WallectActivity extends PageActivity {
 				Context.MODE_PRIVATE);
 
 		map = (Map<String, Boolean>) sharedPreferences.getAll();
-		wallectListAdepter = new WallectListAdepter(this, map);
-		listView.setAdapter(wallectListAdepter);
+		wallectListAdapter = new WallectListAdapter(this, map);
+		listView.setAdapter(wallectListAdapter);
 
 		ImageButton imageButton = (ImageButton) findViewById(R.id.wallect_add);
 		imageButton.setOnClickListener(new OnClickListener() {
@@ -58,11 +60,11 @@ public class WallectActivity extends PageActivity {
 								Editor editor = sharedPreferences.edit();
 								editor.putBoolean(text, false);
 								editor.commit();
-								wallectListAdepter.map.put(text, Boolean.FALSE);
-								wallectListAdepter.keys = wallectListAdepter.map
+								wallectListAdapter.map.put(text, Boolean.FALSE);
+								wallectListAdapter.keys = wallectListAdapter.map
 										.keySet().toArray();
-								wallectListAdepter.notifyDataSetChanged();
-								listView.setAdapter(wallectListAdepter);
+								wallectListAdapter.notifyDataSetChanged();
+								listView.setAdapter(wallectListAdapter);
 							}
 						});
 				builder.show();

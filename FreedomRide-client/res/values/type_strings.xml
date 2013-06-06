@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="type_list">
+	    <item>全部</item>
+	    <item>公园</item>
+	    <item>古镇</item>
+	    <item>历史建筑</item>
+	    <item>展馆</item>
+	    <item>纪念碑</item>
+	    <item>乡村</item>
+	    <item>宗教场所</item>
+	    <item>自然保护区</item>
+	</string-array>
+</resources>

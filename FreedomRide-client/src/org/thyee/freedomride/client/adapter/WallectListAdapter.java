@@ -1,4 +1,4 @@
-package org.thyee.freedomride.client.view;
+package org.thyee.freedomride.client.adapter;
 
 import java.util.Map;
 
@@ -13,13 +13,13 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-public class WallectListAdepter extends BaseAdapter {
+public class WallectListAdapter extends BaseAdapter {
 	private Context mContext;
 	public Map<String, Boolean> map;
 	public Object[] keys;
 	private WallectCheckListener wallectCheckListener;
 
-	public WallectListAdepter(Context c, Map<String, Boolean> map) {
+	public WallectListAdapter(Context c, Map<String, Boolean> map) {
 		mContext = c;
 		this.map = map;
 		if (map != null && map.keySet() != null) {
